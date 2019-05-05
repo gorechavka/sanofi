@@ -1,0 +1,87 @@
+@keyframes bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.link__btn {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 356px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  margin-bottom: 50px;
+}
+
+.link__btn:hover {
+  animation-name: float, bob;
+  animation-duration: .3s, 1.5s;
+  animation-delay: 0s, .3s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+}
+
+
+
+.link__btn span {
+  color: transparent;
+  font-size: 2.9rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: 1s;
+}
+
+.link__btn:hover span {
+  color: rgba(20, 15, 20);
+  transform: translateY(80px)
+}
+
+
+.patient__link {
+  background-image: url('../../assets/patient.png');
+  margin-right: 150px;
+}
+
+.doctor__link {
+  background-image: url('../../assets/doctor.png');
+  margin-left: 150px;
+}
+
+:host {
+  width: 100%;
+  height: 100%;
+}

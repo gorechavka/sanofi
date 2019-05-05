@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 10%;
+  font-size: 3rem;
+}
+
+app-sidenav-push {
+  position: fixed;
+  top: 100px;
+  z-index: 5;
+  height: 80%;
+  display: block;
+  border-radius: 0 70px 70px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}

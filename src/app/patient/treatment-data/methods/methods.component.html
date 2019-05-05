@@ -1,0 +1,13 @@
+<article class="content">
+  <div class="info__wrapper">
+    <h5 class="info__title">{{method.title}}</h5>
+    <div class="info__image">
+      <div class="info z-depth-3">{{method.text}}</div>
+      <img [src]="'../../../../assets/' + method.img">
+    </div>
+  </div>
+  <button class="btn-floating next__btn" (click)="onPreviousClick()" [disabled]="current == 0"><i
+      class="material-icons">chevron_left</i></button>
+  <button class="btn-floating next__btn" (click)="onNextClick()" [disabled]="current==methods.length-1"><i
+      class="material-icons">chevron_right</i></button>
+</article>

@@ -1,0 +1,8 @@
+<button class="eye__btn z-depth-3" (click)="onClick(eye)" #eye>
+  <div class="eye" [ngClass]="{'opened': opened, 'closed': !opened}" title='Изменить режим'>
+    <div class="shut">
+      <span></span>
+    </div>
+    <div class="ball"></div>
+  </div>
+</button>

@@ -1,0 +1,9 @@
+<app-sidenav-push>
+  <app-menu [items]="menuItems" (itemChoosen)="onItemChoosen($event)"></app-menu>
+</app-sidenav-push>
+<div class="content">
+  <app-methods *ngIf="choosen === 'methods'"></app-methods>
+  <app-gene-therapy *ngIf="choosen === 'therapy'"></app-gene-therapy>
+  <app-risks *ngIf="choosen === 'risks'"></app-risks>
+  <app-memo *ngIf="choosen === 'memo'"></app-memo>
+</div>

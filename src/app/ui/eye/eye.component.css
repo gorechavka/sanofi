@@ -1,0 +1,131 @@
+.eye__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 255, 255, 0.8);
+  background-size: 64px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+
+.eye__btn::before,
+.eye__btn::after {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  content: '';
+  height: 107px;
+  width: 107px;
+  border: 5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 100%;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(.65, 0, .34, 1);
+  z-index: -1;
+}
+
+.eye__btn::before {
+  animation-delay: 0.3s;
+}
+
+.eye__btn.clicked::before,
+.eye__btn.clicked::after {
+  animation-name: ripple;
+}
+
+.eye__btn:active {
+  animation-name: shrink;
+  animation-duration: 0.3s;
+}
+
+.eye__btn:hover {
+  transform: scale(1.05)
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.7;
+    transform: scale(1.05, 1.05);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.75, 1.75);
+  }
+}
+
+@keyframes shrink {
+  to {
+    transform: scale(0.98)
+  }
+}
+
+.eye {
+  width: 64px;
+  height: 64px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 75% 0;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 1px 7px 0 rgba(17, 14, 36, 0.3)
+}
+
+
+.ball {
+  width: 14px;
+  height: 14px;
+  background: #222f3e;
+  border-radius: 50%;
+  border: 11px solid #576574;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.shut {
+  width: 95px;
+  height: 52px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 999;
+}
+
+.shut span {
+  display: block;
+  width: 100%;
+  background: rgb(86, 101, 150);
+  border-radius: 0 0 60% 60%;
+  transition: 0.4s all;
+}
+
+
+.closed>.shut span {
+  height: 100%;
+}
+
+
+.opened>.shut span {
+  height: 20%;
+}

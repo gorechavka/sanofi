@@ -1,0 +1,9 @@
+<app-header class="header">
+</app-header>
+<main class="content">
+  <app-eye (toggleState)="onToggleState($event)" [opened]="state==='healthy'"></app-eye>
+  <app-treatment-data *ngIf="state==='diseased'">
+  </app-treatment-data>
+  <app-disease-data *ngIf="state==='healthy'">
+  </app-disease-data>
+</main>

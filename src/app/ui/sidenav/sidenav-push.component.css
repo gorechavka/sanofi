@@ -1,0 +1,18 @@
+.side {
+  width: 250px;
+  height: 100%;
+  margin-left: -185px;
+  padding-top: 20px;
+  transition: margin-left 0.5s;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.side.opened {
+  margin-left: 0px
+}
+
+.logo {
+  padding-left: 20%;
+  margin-bottom: 20px;
+}

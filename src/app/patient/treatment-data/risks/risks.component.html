@@ -1,0 +1,17 @@
+<!-- <div class="viruses">
+  <img *ngFor="let i of [1,2,3,4,5]" [class]="'virus virus-'+i" src="../../../../assets/virus.png" #virus
+    [width]="+i*50">
+</div> -->
+<article class="content">
+  <div class="info__wrapper">
+    <h5 class="info__title">{{risk.title}}</h5>
+    <div class="info__image">
+      <div class="info z-depth-4">{{risk.text}}</div>
+      <img [src]="'../../../../assets/' + risk.img">
+    </div>
+  </div>
+  <button class="btn-floating next__btn" (click)="onPreviousClick()" [disabled]="current == 0"><i
+      class="material-icons">chevron_left</i></button>
+  <button class="btn-floating next__btn" (click)="onNextClick()" [disabled]="current==risks.length-1"><i
+      class="material-icons">chevron_right</i></button>
+</article>

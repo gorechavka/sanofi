@@ -1,0 +1,9 @@
+<nav class="side z-depth-2" (mouseover)="onHover($event.target)" (mouseout)="onBlur($event.target)"
+  [ngClass]="{'opened': opened}">
+  <div class="logo">
+    <img src='../../../assets/logo.png' alt="sanofi">
+  </div>
+  <ng-content>
+  </ng-content>
+
+</nav>

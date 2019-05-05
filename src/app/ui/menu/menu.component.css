@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-self: flex-start;
+}
+
+.item__icon {
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.item__title {
+  margin-right: 10px;
+  width: 200px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #BBBA2C;
+  color: white;
+}
+
+.item:hover i {
+  color: white;
+}

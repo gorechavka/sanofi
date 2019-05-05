@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="info__wrapper">
+    <h6 class="symptom__title">
+      {{symptom.title}}
+    </h6>
+    <div class="symptom__imgs z-depth-3" #imgs>
+      <img [src]="'../../../../assets/'+symptom.img">
+    </div>
+    <div class="symptom__range" (change)="onRangeChange($event.target.value)">
+      <input class="range" name="range" type="range" min="0" max="10" steps="1" value="0">
+    </div>
+  </div>
+  <button class="btn-floating next__btn" (click)="onPreviousClick()" [disabled]="current == 0"><i
+      class="material-icons">chevron_left</i></button>
+  <button class="btn-floating next__btn" (click)="onNextClick()" [disabled]="current==symptoms.length-1"><i
+      class="material-icons">chevron_right</i></button>
+</div>

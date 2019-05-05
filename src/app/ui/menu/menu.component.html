@@ -1,0 +1,12 @@
+<table class="menu">
+  <tr *ngFor="let item of items" class="item" (click)="onChoose(item.path)">
+    <td class="item__title">
+      <!-- <a [routerLink]="item.path" routerLinkActive="link-active"> -->
+      <h6>{{item.title}}</h6>
+      <!-- </a> -->
+    </td>
+    <td class="item__icon">
+      <i class="material-icons">accessibility</i>
+    </td>
+  </tr>
+</table>

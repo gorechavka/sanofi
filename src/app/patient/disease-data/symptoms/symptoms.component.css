@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
+.info__wrapper {
+  background: transparent;
+  width: 100%;
+  padding: 120px 14% 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.next__btn {
+  position: fixed;
+  top: 5%;
+  right: 12%;
+  background-color: #BBBA2C;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.next__btn:hover {
+  filter: brightness(1.15);
+  opacity: 1;
+}
+
+.next__btn:first-of-type {
+  right: 15%;
+}
+
+.symptom__title {
+  font-size: 3rem;
+  color: #3f4a70;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: -5.8%;
+  margin-bottom: 6.5%;
+}
+
+.symptom__imgs {
+  position: relative;
+  width: 79%;
+  height: 75%;
+  align-self: center;
+  border-radius: 100px;
+  overflow: hidden;
+  background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%, transparent 100%)
+}
+
+.symptom__imgs img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.symptom__range {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.range {
+  width: 70%;
+}
