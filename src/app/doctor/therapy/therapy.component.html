@@ -1,0 +1,13 @@
+<article class="content">
+  <div class="info__wrapper">
+    <h5 class="info__title">{{therapy.title}}</h5>
+    <div class="info__image">
+      <div class="info z-depth-3">{{therapy.text}}</div>
+      <img [src]="'../../../../assets/' + therapy.img">
+    </div>
+  </div>
+  <button class="btn-floating next__btn" (click)="onPreviousClick()" [disabled]="current == 0"><i
+      class="material-icons">chevron_left</i></button>
+  <button class="btn-floating next__btn" (click)="onNextClick()" [disabled]="current==therapies.length-1"><i
+      class="material-icons">chevron_right</i></button>
+</article>

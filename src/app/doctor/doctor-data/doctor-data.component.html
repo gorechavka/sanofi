@@ -1,8 +1,10 @@
 <app-header class="header">
 </app-header>
 <app-sidenav-push>
-  <app-menu [items]="menuItems"></app-menu>
+  <app-menu [items]="menuItems" (itemChoosen)="onItemChoosen($event)"></app-menu>
 </app-sidenav-push>
 <main class="content">
-  здесь пока ничего нет, извините :(
+  <app-disease *ngIf="choosen === 'disease'"></app-disease>
+  <app-diagnosis *ngIf="choosen === 'diagnosis'"></app-diagnosis>
+  <app-therapy *ngIf="choosen === 'therapy'"></app-therapy>
 </main>

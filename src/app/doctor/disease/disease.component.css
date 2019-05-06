@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
+.info__wrapper {
+  background: transparent;
+  width: 100%;
+  padding: 120px 14% 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.info__wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  filter: grayscale(0.5) brightness(0.8) blur(2px);
+  top: 0;
+  left: 0;
+  background-image: url('../../../assets/juvenile.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.info__title {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin-top: -6%;
+  margin-bottom: 8.5%;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center
+}
+
+.info__mechanism,
+.info__general {
+  background-color: rgba(20, 10, 10, 0.3);
+  text-align: center;
+  padding: 6% 30px;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0 4px rgba(255, 15, 155, 0.2);
+  border-radius: 100px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  height: min-content;
+  width: 40%;
+}
+
+.info__general {
+  margin-right: 10%;
+  text-align: left;
+}
+
+.info__mechanism {
+  text-align: right;
+}

@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="info__wrapper">
+    <h6 class="diagnosis__title">
+      {{diagnosis.title}}
+    </h6>
+    <div class="diagnosis__info">
+      <div class="info z-depth-3">
+        {{diagnosis.text}}
+      </div>
+      <div class="image">
+        <img [src]="'../../../assets/' + diagnosis.img">
+      </div>
+    </div>
+    <button class="btn-floating next__btn" (click)="onPreviousClick()" [disabled]="current == 0"><i
+        class="material-icons">chevron_left</i></button>
+    <button class="btn-floating next__btn" (click)="onNextClick()" [disabled]="current==diagnoses.length-1"><i
+        class="material-icons">chevron_right</i></button>
+  </div>

@@ -57,6 +57,10 @@
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 150px;
   text-align: justify;
+  text-overflow: ellipsis;
+  overflow: auto;
+  min-height: 450px;
+  min-width: 450px
 }
 
 .add__info {
@@ -72,4 +76,13 @@
   align-self: center;
   font-weight: bold;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: auto;
+  min-height: 300px;
+  min-width: 350px;
+}
+
+.main__info::-webkit-scrollbar,
+.add__info::-webkit-scrollbar {
+  width: 0;
 }

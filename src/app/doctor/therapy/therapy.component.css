@@ -64,6 +64,8 @@
   align-self: center;
   margin-bottom: 9%;
   max-height: 95%;
+  max-width: 60%;
+  border-radius: 100px;
 }
 
 .info {
@@ -74,5 +76,5 @@
   padding: 70px 60px;
   height: min-content;
   width: 40%;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }

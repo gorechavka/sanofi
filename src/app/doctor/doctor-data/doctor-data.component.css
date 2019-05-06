@@ -11,9 +11,6 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
-  text-align: center;
-  padding: 10%;
-  font-size: 3rem;
 }
 
 app-sidenav-push {
